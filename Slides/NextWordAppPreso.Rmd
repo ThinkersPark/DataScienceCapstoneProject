@@ -1,5 +1,5 @@
 ---
-title: "Easy Writing App - Coursera/ JHU Data Science Capstone Project"
+title: "Next Word App - Coursera/ JHU Data Science Capstone Project"
 subtitle: "This presentation describes the text prediction app built for the Coursera/ John Hopkins University Data Science Capstone Project (part of Data Science Specialisation). 
 The app is available at <https://thinkerspark.shinyapps.io/NextWordApp/>.
 Code is available at <https://github.com/ThinkersPark/DataScienceCapstoneProject>."
