@@ -1,7 +1,8 @@
 ---
 title: "Easy Writing App - Coursera/ JHU Data Science Capstone Project"
 subtitle: "This presentation describes the text prediction app built for the Coursera/ John Hopkins University Data Science Capstone Project (part of Data Science Specialisation). 
-The app is available at <https://thinkerspark.shinyapps.io/NextWordApp/>."
+The app is available at <https://thinkerspark.shinyapps.io/NextWordApp/>.
+Code is available at <https://github.com/ThinkersPark/DataScienceCapstoneProject>."
 author: "ThinkersPark"
 date: "2026-04-26"
 output: 
@@ -23,7 +24,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## DataScienceCapstone_ProgressReport
 
-## To be published at https://thinkerspark.github.io/DataScienceCapstoneProject/
+## To be published at https://thinkerspark.github.io/DataScienceCapstoneProject/NextWordAppPreso.html
 ```
 
 ## The Algorithm: Interpolated KEN Smoothing
