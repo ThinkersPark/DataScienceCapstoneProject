@@ -1,20 +1,20 @@
 
 setwd("C:/Users/Oliwia Kozlowska/Documents/R/RworkCoursera/Capstone/DataScienceCapstoneProject")
 
-load("./Data/dimReduction/eval10k_train.Rdata") 
-load("./Data/dimReduction/eval10k_val.Rdata") 
+load("./Data/evaluation/eval10k_train.Rdata") 
+load("./Data/evaluation/eval10k_val.Rdata") 
 
-load("./Data/dimReduction/eval20k_train.Rdata") 
-load("./Data/dimReduction/eval20k_val.Rdata") 
+load("./Data/evaluation/eval20k_train.Rdata") 
+load("./Data/evaluation/eval20k_val.Rdata") 
 
-load("./Data/dimReduction/eval30k_train.Rdata") 
-load("./Data/dimReduction/eval30k_val.Rdata") 
+load("./Data/evaluation/eval30k_train.Rdata") 
+load("./Data/evaluation/eval30k_val.Rdata") 
 
-load("./Data/dimReduction/eval40k_train.Rdata") 
-load("./Data/dimReduction/eval40k_val.Rdata") 
+load("./Data/evaluation/eval40k_train.Rdata") 
+load("./Data/evaluation/eval40k_val.Rdata") 
 
-load("./Data/dimReduction/eval50k_train.Rdata") 
-load("./Data/dimReduction/eval50k_val.Rdata") 
+load("./Data/evaluation/eval50k_train.Rdata") 
+load("./Data/evaluation/eval50k_val.Rdata") 
 
 eval10k_train_full <- c(eval10k_train ,ts_size=864656, model_size=5035192)
 eval20k_train_full <- c(eval20k_train ,ts_size=1723088, model_size=8058168)
@@ -26,7 +26,7 @@ data_size <- c(6361136, 3130064, 1244168, 624672, 56552)
 model_size <- c(112563544, 61515704, 27818880, 14912296, 702616)
 model_time <- c(15.71427064, 6.21411338, 2.35848055, 0.88785982, 0.01773076)
 
-load("./Data/dimReduction/eval20k_test.Rdata") 
+load("./Data/evaluation/eval20k_test.Rdata") 
 
 ## Saving plots as png, to be included in preso
 

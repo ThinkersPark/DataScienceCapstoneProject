@@ -51,7 +51,7 @@ trainset_prepped <- prep_set(training_set)
 valset_prepped <- prep_set(validation_set)
 
 eval10k_train <- evaluate_on_dataset(kn_model, trainset_prepped, topk = 5, fallback_top_unigram = 10)
-save(eval10k_train, file="./Data/dimReduction/eval10k_train.Rdata")
+save(eval10k_train, file="./Data/evaluation/eval10k_train.Rdata")
 
 ## object.size(kn_model)
 ## 5035192 bytes
@@ -60,11 +60,11 @@ save(eval10k_train, file="./Data/dimReduction/eval10k_train.Rdata")
 
 eval10k_train_full <- c(eval10k_train ,ts_size=864656, model_size=5035192)
 eval10k_val <- evaluate_on_dataset(kn_model, valset_prepped, topk = 5, fallback_top_unigram = 10)
-save(eval10k_val, file="./Data/dimReduction/eval10k_val.Rdata")
+save(eval10k_val, file="./Data/evaluation/eval10k_val.Rdata")
 
 
 eval20k_train <- evaluate_on_dataset(kn_model, trainset_prepped, topk = 5, fallback_top_unigram = 10)
-save(eval20k_train, file="./Data/dimReduction/eval20k_train.Rdata")
+save(eval20k_train, file="./Data/evaluation/eval20k_train.Rdata")
 
 ## object.size(kn_model)
 ## 8058168 bytes
@@ -73,10 +73,10 @@ save(eval20k_train, file="./Data/dimReduction/eval20k_train.Rdata")
 
 eval20k_train_full <- c(eval20k_train ,ts_size=1723088, model_size=8058168)
 eval20k_val <- evaluate_on_dataset(kn_model, valset_prepped, topk = 5, fallback_top_unigram = 10)
-save(eval20k_val, file="./Data/dimReduction/eval20k_val.Rdata")
+save(eval20k_val, file="./Data/evaluation/eval20k_val.Rdata")
 
 eval30k_train <- evaluate_on_dataset(kn_model, trainset_prepped, topk = 5, fallback_top_unigram = 10)
-save(eval30k_train, file="./Data/dimReduction/eval30k_train.Rdata")
+save(eval30k_train, file="./Data/evaluation/eval30k_train.Rdata")
 
 ## object.size(kn_model)
 ## 10389464 bytes
@@ -85,11 +85,11 @@ save(eval30k_train, file="./Data/dimReduction/eval30k_train.Rdata")
 
 eval30k_train_full <- c(eval30k_train ,ts_size=2578928, model_size=10389464)
 eval30k_val <- evaluate_on_dataset(kn_model, valset_prepped, topk = 5, fallback_top_unigram = 10)
-save(eval30k_val, file="./Data/dimReduction/eval30k_val.Rdata")
+save(eval30k_val, file="./Data/evaluation/eval30k_val.Rdata")
 
 
 eval40k_train <- evaluate_on_dataset(kn_model, trainset_prepped, topk = 5, fallback_top_unigram = 10)
-save(eval40k_train, file="./Data/dimReduction/eval40k_train.Rdata")
+save(eval40k_train, file="./Data/evaluation/eval40k_train.Rdata")
 
 ## object.size(kn_model)
 ## 12150768 bytes
@@ -98,11 +98,11 @@ save(eval40k_train, file="./Data/dimReduction/eval40k_train.Rdata")
 
 eval40k_train_full <- c(eval40k_train ,ts_size=3434768, model_size=12150768)
 eval40k_val <- evaluate_on_dataset(kn_model, valset_prepped, topk = 5, fallback_top_unigram = 10)
-save(eval40k_val, file="./Data/dimReduction/eval40k_val.Rdata")
+save(eval40k_val, file="./Data/evaluation/eval40k_val.Rdata")
 
 
 eval50k_train <- evaluate_on_dataset(kn_model, trainset_prepped, topk = 5, fallback_top_unigram = 10)
-save(eval50k_train, file="./Data/dimReduction/eval50k_train.Rdata")
+save(eval50k_train, file="./Data/evaluation/eval50k_train.Rdata")
 
 ## object.size(kn_model)
 ## 13472864 bytes
@@ -112,7 +112,7 @@ save(eval50k_train, file="./Data/dimReduction/eval50k_train.Rdata")
 eval50k_train_full <- c(eval50k_train ,ts_size=4289920, model_size=13472864)
 
 eval50k_val <- evaluate_on_dataset(kn_model, valset_prepped, topk = 5, fallback_top_unigram = 10)
-save(eval50k_val, file="./Data/dimReduction/eval50k_val.Rdata")
+save(eval50k_val, file="./Data/evaluation/eval50k_val.Rdata")
 
 # Selecting final Kngrams=20k given model size & time to predict the next word below 1s
 
@@ -124,14 +124,14 @@ dtngram<- build_ngram_counts(training_set_final)
 kn_comps <- compute_kn_components(dtngram)  
 kn_model_final <- make_kn_probability_model(kn_comps)
 
-save(training_set_final, file = ".Data/dimReduction/training_set_final.RData")
-save(kn_model_final, file = "./Data/dimReduction/kn_model_final.RData")
+save(training_set_final, file = ".Data/evaluation/training_set_final.RData")
+save(kn_model_final, file = "./Data/evaluation/kn_model_final.RData")
 
 ## Evaluation on test set
 
 testset_prepped <- prep_set(testing_set)
 eval20k_test <- evaluate_on_dataset(kn_model_final, testset_prepped, topk = 5, fallback_top_unigram = 10)
-save(eval20k_test, file="./Data/dimReduction/eval20k_test.Rdata")
+save(eval20k_test, file="./Data/evaluation/eval20k_test.Rdata")
 
 ## Preparing for app load
 
